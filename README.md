@@ -1,7 +1,6 @@
 ![image](https://github.com/wadlo/Criss-Cross-CS/assets/86272030/fc6210c0-8c21-4a9b-b1a7-d53e21f8bce5)
 
-# Criss-Cross-CS
-A C# wrapper for Criss-Cross, A simple Godot addon that adds generic grid classes.
+A C# wrapper for [Criss-Cross](https://github.com/BenjaTK/Criss-Cross), A simple Godot addon that adds generic grid classes.
 
 # Setup
 1. Use the [Godot Engine .NET / mono build](https://godotengine.org/download). **You can still use GDScript with Mono build.**
