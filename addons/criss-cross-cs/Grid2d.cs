@@ -5,13 +5,14 @@ using Godot;
 /// <summary>
 /// Class <c>Grid2D</c> models a grid in two-dimensional space. This wraps the gdscript grid2d class and gives C# types as function and variable values.
 /// </summary>
-public class Grid2D
+public partial class Grid2D : Node2D
 {
+    [Export]
     private Node2D gdGridRef;
 
-    public Grid2D(Node2D node)
+    public override void _Ready()
     {
-        gdGridRef = node;
+        gdGridRef = gdGridRef ?? GetChild<Node2D>(0);
     }
 
     public bool HasCells(List<Vector2I> cells)
@@ -26,6 +27,11 @@ public class Grid2D
             }
         }
         return true;
+    }
+
+    public Node2D getGDGridRef()
+    {
+        return gdGridRef;
     }
 
     public bool HasCell(Vector2I cell)
